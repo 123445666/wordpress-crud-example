@@ -18,7 +18,6 @@ function cute_testimonials_create()
       array('%s', '%s') //data format			
     );
     $message .= "Testimonial inserted";
-    admin_url("testimonials-list.php");
   }
 ?>
   <link type="text/css" href="<?php echo WP_PLUGIN_URL; ?>/cute-testimonials/style-admin.css" rel="stylesheet" />
@@ -27,7 +26,7 @@ function cute_testimonials_create()
     <?php if (isset($message)) : ?><div class="updated">
         <p><?php echo $message; ?></p>
       </div><?php endif; ?>
-    <?php if ($_POST['insert']) { ?>
+    <?php if (!isset($_POST['insert'])) { ?>
       <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
         <table class='wp-list-table widefat fixed'>
           <tr>

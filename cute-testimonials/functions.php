@@ -32,7 +32,7 @@ function cute_testimonials_shortcode()
   $html += '<link rel="stylesheet" href="https://e6t7a8v2.stackpathcdn.com/tutorial/css/fontawesome-all.min.css">';
   $html += '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">';
   $html += '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">';
-  $html += '<link rel="stylesheet" href="'. plugins_url('assets/css/style.js', __FILE__).'">';
+  $html += '<link rel="stylesheet" href="' . plugins_url('assets/css/style.js', __FILE__) . '">';
 
   $html += '<div class="container">';
   $html += '<div class="row">';
@@ -40,22 +40,21 @@ function cute_testimonials_shortcode()
   $html += '<div id="testimonial-slider" class="owl-carousel">';
 
   foreach ($rows as $row) {
-    
     $html += "<div class='testimonial'>";
     if (!empty($row->image)) {
       $html += "<div class='pic'>";
-      $html += "<img src='".wp_get_attachment_url($row->image)."' />";
+      $html += "<img src='" . wp_get_attachment_url($row->image) . "' />";
       $html += "</div>";
     }
-    $html += "<div class='description'>".$row->notes."</div>";
-    $html += "<h3 class='testimonial-title'>".$row->name."</h3>";
+    $html += "<div class='description'>" . $row->notes . "</div>";
+    $html += "<h3 class='testimonial-title'>" . $row->name . "</h3>";
     $html += "</div>";
- 
+  }
   $html += "</div></div></div></div>";
 
   $html += '<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>';
   $html += '<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>';
-  $html += '<script type="text/javascript" src="'. plugins_url('assets/js/custom.js', __FILE__).'"></script>';
+  $html += '<script type="text/javascript" src="' . plugins_url('assets/js/custom.js', __FILE__) . '"></script>';
 
   // Things that you want to do. 
 
