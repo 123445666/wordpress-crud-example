@@ -5,8 +5,10 @@ Description:
 Version: 1
 Author: funaway89
 */
-global $wpdb;
-require __DIR__ . '/init.php';
+define( 'MY_PLUGIN_FILE_PATH', __FILE__ );
+define( 'MY_PLUGIN_DIR_PATH', plugin_dir_path( __FILE__ ) );
+
+include plugin_dir_path( __FILE__ ) . 'init.php';
 
 add_action('admin_enqueue_scripts', 'testimonials_include_js');
 
@@ -25,6 +27,8 @@ function testimonials_include_js()
 // function that runs when shortcode is called
 function cute_testimonials_shortcode()
 {
+  global $wpdb;
+
   $table_name = $wpdb->prefix . "cute_testimonials";
   $rows = $wpdb->get_results("SELECT name,image,notes from $table_name");
 
