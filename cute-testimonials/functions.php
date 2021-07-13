@@ -29,7 +29,7 @@ function cute_testimonials_shortcode()
 {
   global $wpdb;
 
-  $table_name = $wpdb->prefix . "cute_testimonials";
+  $table_name = $wpdb->prefix . "cute_testimonials_v2";
   $rows = $wpdb->get_results("SELECT name,image,notes from $table_name");
 
   $html = '';

@@ -3,7 +3,7 @@
 function cute_testimonials_update()
 {
   global $wpdb;
-  $table_name = $wpdb->prefix . "cute_testimonials";
+  $table_name = $wpdb->prefix . "cute_testimonials_v2";
   $id = $_GET["id"];
   $name = $_POST["name"];
   $image = $_POST["attachment_id"];

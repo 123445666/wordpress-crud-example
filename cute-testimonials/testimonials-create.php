@@ -10,7 +10,7 @@ function cute_testimonials_create()
 
   if (isset($_POST['insert'])) {
     global $wpdb;
-    $table_name = $wpdb->prefix . "cute_testimonials";
+    $table_name = $wpdb->prefix . "cute_testimonials_v2";
 
     $wpdb->insert(
       $table_name, //table
@@ -19,9 +19,6 @@ function cute_testimonials_create()
     );
     $message .= "Testimonial inserted";
   }
-
-  $query = $wpdb->prepare( 'SHOW TABLES LIKE %s', $wpdb->esc_like( $table_name ) );
-  echo $wpdb->get_var( $query );
 ?>
   <link type="text/css" href="<?php echo WP_PLUGIN_URL; ?>/cute-testimonials/style-admin.css" rel="stylesheet" />
   <div class="wrap">

@@ -13,7 +13,7 @@ function cute_testimonials_list() {
         </div>
         <?php
         global $wpdb;
-        $table_name = $wpdb->prefix . "cute_testimonials";
+        $table_name = $wpdb->prefix . "cute_testimonials_v2";
 
         $rows = $wpdb->get_results("SELECT id,name,image,notes from $table_name");
         ?>

@@ -5,13 +5,13 @@ function ss_options_install()
 {
 
   global $wpdb;
-  $table_name = $wpdb->prefix . "cute_testimonials";
+  $table_name = $wpdb->prefix . "cute_testimonials_v2";
   $charset_collate = $wpdb->get_charset_collate();
   $sql = "CREATE TABLE $table_name (
             `id` INT(11) NOT NULL AUTO_INCREMENT,
             `name` varchar(100) CHARACTER SET utf8 NOT NULL,
             `image` varchar(50) CHARACTER SET utf8,
-            `notes` varchar(500) CHARACTER SET utf8 NOT NULL,
+            `notes` varchar(1000) CHARACTER SET utf8 NOT NULL,
             PRIMARY KEY (`id`)
           ) $charset_collate; ";
 
