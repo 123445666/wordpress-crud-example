@@ -63,7 +63,7 @@ function cute_testimonials_update()
           </tr>
           <tr>
             <th>Review</th>
-            <td><textarea rows="4" cols="100" name="notes" value="<?php echo $notes; ?>"></textarea></td>
+            <td><textarea rows="4" cols="100" name="notes"><?php echo $notes; ?></textarea></td>
           </tr>
         </table>
         <input type='submit' name="update" value='Save' class='button'> &nbsp;&nbsp;
