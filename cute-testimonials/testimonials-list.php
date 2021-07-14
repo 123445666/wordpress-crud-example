@@ -30,7 +30,7 @@ function cute_testimonials_list() {
                     <td class="manage-column ss-list-width"><?php echo $row->id; ?></td>
                     <td class="manage-column ss-list-width"><?php echo $row->name; ?></td>
                     <td class="manage-column ss-list-width"><img src="<?php echo wp_get_attachment_url($row->image) ?>" class="image" style="margin-top:10px;width:200px;" /></td>
-                    <td class="manage-column ss-list-width"><?php echo $row->notes; ?></td>
+                    <td class="manage-column ss-list-width"><?php echo stripslashes($row->notes); ?></td>
                     <td><a href="<?php echo admin_url('admin.php?page=cute_testimonials_update&id=' . $row->id); ?>">Edit</a></td>
                 </tr>
             <?php } ?>
